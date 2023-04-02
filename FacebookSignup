@@ -1,0 +1,14 @@
+public class PerformActionUsingActionClass {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.facebook.com/");
+		Actions act =new Actions(driver);
+		act.sendKeys("man").perform();
+		act.sendKeys(Keys.TAB).sendKeys("afd").perform();
+		act.sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+	}
+
+}
